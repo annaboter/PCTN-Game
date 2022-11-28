@@ -11,6 +11,10 @@ body {
     font-family: 'Inconsolata', monospace;
   }
 
+  img{
+    border-radius: 25px;
+  }
+
   #amonute{
     position: absolute;
     left: 43%;
