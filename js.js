@@ -5,10 +5,42 @@ var reset = document.getElementById('resetButton');
 var answer = '';
 let image = document.getElementById('pocahontas');
 
+
+
+// Test part
+
+const images = ["images/amonute.jpeg", 
+"images/boat.jpeg", 
+"images/cross.jpeg", 
+"images/john.jpeg", 
+"images/leaf.jpeg", 
+"images/necklace.jpeg", 
+"images/pipe.jpeg"];
+
+
+function generateRandom(maxLimit = 6){
+  let rand = Math.random() * maxLimit;
+  console.log(rand); // say 99.81321410836433
+
+  rand = Math.floor(rand); // 99
+
+  return rand;
+}
+
+let number = generateRandom()
+
+let rand_image = images[number];
+
+window.onload = function() {
+  //when the document is finished loading, replace everything
+  //between the <a ...> </a> tags with the value of splitText
+document.getElementById("amonute").innerHTML="<img src="+rand_image+" width=\"auto\" height=\"200px\">";
+};
+
 var story_telling = {
   //beginning of the story
   "start": { 
-    "question": "Your name is Amonute. You are part of a community of people that live in the lands of their territory. Your father is the chief of this community. As the chief's daughter, and as a girl with higher status than most members of the the community, you feel responsible for it. At some point, your community notices that strange men have set foor upon your lands. They seem to intend to make up camp and stay. What do you do?",
+    "question": "Your name is Amonute. You are part of a community of people that live in the lands of their territory. Your father is the chief of this community. As the chief's daughter, and as a girl with higher status than most members of the the community, you feel responsible for it. At some point, your community notices that strange men have set foot upon your lands. They seem to intend to make up camp and stay. What do you do?",
     "answers": {
       "a": "Approach the strangers.",
       "b": "Do not approach the strangers.",
@@ -543,7 +575,7 @@ var story_telling = {
 submit.addEventListener('mouseup', function(){ //when a button on a pointing device is released while the pointer is located inside it
   answer = form.querySelectorAll('input[type=radio]:checked')[0].value; //a list of the document's elements that match the specified group of selectors.
   if(answer) {
-    story++;//increment or add 1 to
+    story++;//increment or add 1
     populateForm(story + '_' + answer);//if a radio is checked populate our form with the answer
     console.log("Story time!"); // Console log to make sure things are working
   }
