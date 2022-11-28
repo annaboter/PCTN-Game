@@ -1,8 +1,7 @@
 body {
     height: 100%;
     margin: 0;
-    background-color: #075374;
-    background: linear-gradient(#096081, #075374,#043857, #03283e);
+    background-color: #f7f7f7;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-size: 18px;
@@ -18,7 +17,7 @@ body {
     padding-top: 70px;
     height: 200px;
     width: auto;
-    
+    border-radius: 25px;
   }
 
   #wrapper{
@@ -28,6 +27,13 @@ body {
     display:flex;
     align-items: center;
     justify-content: center;
+    background-color: #f7f7f7;
+  }
+
+  #theAdventure{
+    background-color: #075374;
+    background: linear-gradient(#096081, #075374,#043857, #03283e);
+    border-radius: 25px;
   }
   
   form {
@@ -47,7 +53,7 @@ body {
   }
   form a.continue {
     font-size: 1.175em;
-    background-color: #F5ECEE;
+    background-color: #f7f7f7;
     color:  #466257;
     padding: .5em 1em;
     text-decoration: none;
@@ -56,7 +62,7 @@ body {
 
   form a.continue:hover,
   form a.continue:focus { /*when you hover of the continue button*/
-    background-color: #F5ECEE;
+    background-color: #f7f7f7;
     color:#DA966A;
     border-radius: 25px;
   }
@@ -66,7 +72,7 @@ body {
   button.reset{
       background-color: transparent;
       border:none;
-      color: #F5ECEE;
+      color: #f7f7f7;
       font-family: 'Inconsolata', monospace;
       font-size: 18px;
       letter-spacing: .5px;
@@ -83,7 +89,7 @@ body {
   }
   form label:hover span, form label:focus span { /*changes the hiover state of answer boxes*/
     border: 4px solid  #466257;
-    background-color:#F5ECEE;
+    background-color:#f7f7f7;
     color: #466257;
   }
   form input[type=radio] {
@@ -91,12 +97,16 @@ body {
   }
   form input[type=radio]:checked + span { /*changes when answer boxes are selected*/
     border: 4px solid  #C97163;
-    background-color:#F5ECEE;
+    background-color:#f7f7f7;
     color: #C97163;
   }
 
   #footer{
     background-color:#03283e;
-    color:#F5ECEE;
+    color:#f7f7f7;
     text-align: center;
+  }
+
+  #footerText {
+    padding: 10px;
   }
